@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Resume Analyzer</title>
+
+</head>
+
+<body>
+
+<h2>Upload Resume</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">
+
+        Upload
+
+    </button>
+
+</form>
+
+<hr>
+
+<h3>Extracted Text</h3>
+
+<pre>
+
+{{ text }}
+
+</pre>
+
+</body>
+
+</html>
